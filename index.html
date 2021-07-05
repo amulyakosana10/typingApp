@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS DOM</title>
+	<!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/mdb.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"> -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		.textArea textarea
+		{
+			/*width: 500px;*/
+			border: 3px solid gray;
+			border-radius: 20px;
+			outline: none;
+		}
+		::placeholder
+		{
+			text-align: center;
+		}
+		#original-text 
+		{
+			border-radius: 0px 20px 0px 20px;
+		}
+		#btns button
+		{
+			box-shadow: 0 0 10px black;
+			margin-bottom: 10px;
+			padding: 10px 20px ;
+			
+		}
+
+	</style>
+</head>
+<body>
+	<header class="bg-dark p-3">
+		<h2 class="text-center mt-3 text-white">TYPING TEXT APP</h2>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="card mt-5">
+					<div class="card-body text-center ">
+						<section>
+							<p class="bg-info p-2 text-white" id="original-text">Thanks for joining MERN stack.</p>
+						</section>
+
+						<section class="textArea">
+							<div>
+								<textarea placeholder="Clock strats when you strats typing.." class="text-center col-8" cols="10" rows="5" id="text-area"></textarea>
+							</div>
+						</section>
+					</div>
+				</div>
+				<!-- STOP WATCH -->
+				<div class="h2 text-center mt-5 ">
+					<span id="min">00 <span class="h5">minutes</span> </span>
+                    <span id="sec">00 <span class="h5">seconds</span> </span>
+                    <span id="m-sec">00 <span class="h5">millisec</span></span>
+				</div>
+				<div class="text-center mt-3">
+					<button class="btn btn-success px-4 py-2" id="reset">Reset</button>
+				</div>
+				<!-- Congratulations Section -->
+<!--                         <section class="cong-section bg-success text-center">
+                            <div class="cong-section-div">
+                                <p>Congratulations !!</p>
+                            </div>
+                        </section> -->
+			</div>
+
+			<div class="col-4 text-right mt-5 " id="btns">
+					<button class="btn btn-info  " onclick="changeText(0)">Section-1</button>
+					<button class="btn btn-success  " onclick="changeText(1)">Section-2</button>
+					<button class="btn btn-warning  text-white" onclick="changeText(2)">Section-3</button>
+					<button class="btn btn-secondary " onclick="changeText(3)">Section-4</button>
+					<button class="btn btn-primary " onclick="changeText(4)">Section-5</button>
+					<button class="btn btn-danger " onclick="changeText(5)">Section-6</button>
+					<button class="btn btn-info " onclick="changeText(6)">Section-7</button>
+					<button class="btn btn-secondary " onclick="changeText(7)">Section-8</button>
+			</div>
+		</div>
+	</div>
+
+
+<script src="18_JS_Typingtext.js"></script>
+</body>
+</html>
